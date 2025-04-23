@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("Portfolio script loaded with animations!");
-
   document.querySelectorAll('nav a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
@@ -17,13 +15,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const animateOnScrollElements =
     document.querySelectorAll(".animate-on-scroll");
-
   const observerOptions = {
     root: null,
     rootMargin: "0px",
     threshold: 0.1,
   };
-
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -31,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }, observerOptions);
-
   animateOnScrollElements.forEach((element) => {
     observer.observe(element);
   });
