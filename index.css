@@ -104,12 +104,15 @@ h2::after {
 }
 
 .projects-grid {
-  border: 2px solid red;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
 
+#TMDB {
+  height: 200px;
+  width: 150px;
+}
 .project {
   border: 1px solid #ddd;
   padding: 20px;
